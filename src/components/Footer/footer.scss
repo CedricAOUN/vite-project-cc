@@ -1,6 +1,11 @@
 footer {
   background-color: gray;
   color: white;
-  padding: 20px 0;
+  padding-block: 20px;
   text-align: center;
+
+  // override bootstrap defaults for <p>
+  & p { 
+    margin: 0;
+  }
 }
