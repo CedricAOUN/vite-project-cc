@@ -1,8 +1,12 @@
 import { Nav, Navbar, Container } from "react-bootstrap"
 import './header.scss'
 import logo from '../../assets/logo.png'
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
-function Header({ cartCount }) {
+function Header() {
+  const { cartCount } = useContext(CartContext);
+
   return (
     <>
       <header className="bg-body-tertiary">
