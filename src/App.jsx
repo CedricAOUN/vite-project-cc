@@ -11,9 +11,6 @@ const DISHES = [
   { name: 'Mole poblano', price: 15, imgUrl: 'https://cdn.pixabay.com/photo/2021/02/04/03/57/mole-5980185_960_720.jpg', stock: 5 },
 ];
 
-
-
-
 function App() {
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [cartCount, setCartCount] = useState(0);
@@ -25,7 +22,7 @@ function App() {
   }
 
   const addToCart = () => {
-    setCartCount(cartCount + 1);
+    setCartCount(prevCart => prevCart + 1);
   }
 
   return (
