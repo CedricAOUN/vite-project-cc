@@ -15,7 +15,7 @@ function App() {
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
-  const filteredDishes = DISHES.filter(dish => showNewOnly ? dish.isNew === true : dish.stock > 0);
+  const filteredDishes = DISHES.filter(dish => showNewOnly ? dish.isNew === true && dish.stock > 0 : dish.stock > 0);
 
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
